@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0] - 2026-09-10
+
+### Adicionado
+- Guia de como utilizar o git
+- Estrutura para as entregas em Markdown
+- Documentos convertidos de .docx para .md
+
+### Modificado
+- Atualização das atribuições de requisitos
+- Conversão de documentos .txt para .md
+- Organização da equipe atualizada
+- Regras para documentação RNF atualizadas
+
+### Removido
+- Documentos .docx substituídos por versões .md
+- Arquivo .pdf de organização da equipe removido
+
 ## [1.0.0] - 2026-09-08
 
 ### Adicionado
