@@ -1,0 +1,250 @@
+### DESENVOLVIMENTO DE PROJETOS USANDO O GIT
+    Creditos: Professor Rogério
+
+### 1. Iniciar projeto do zero 
+
+    ✅ Develop nasce Primeiro 
+
+    ✅ Main nasce da Develop
+
+    ✅ Isso garante histórico consistente 
+
+    ✅ Isso segue o GitFlow limpo
+
+    1. Criar pasta do projeto 
+        
+        mkdir meu-projeto
+        
+        cd meu-projeto
+        
+    2. Iniciar o Git local
+        
+        git init
+        
+    3. Criar a branch develop (branch principal de desenvolvimento contínuo.)
+        
+        git checkout -b develop
+        
+    4. Criar o primeiro commit   |  Create the first commit
+        
+        git add .
+        
+        git commit -m "chore: initial project structure"
+        
+    5. Criar o repositório no GitHub (vazio)
+
+        - Sem README
+        - Sem LICENSE
+        - Sem .gitignore
+
+    6. Adicionar o remoto
+        
+        git remote add origin https://seu-repo.git
+        
+    7. Subir a develop 
+        
+        git push -u origin develop
+        
+    8. Criar a main a partir da develop
+        
+        git checkout -b main
+
+        git push -u origin main
+
+### 2. INICIAR UM PROJETO LOCAL A PARTIR DE UM REPOSITÓRIO EXISTENTE
+    
+    ✅ Quando o projeto já existe no GitHub (você vai começar localmente agora).
+
+    1. Clonar o repositório
+        
+        git clone https://seu-repo.git
+        
+    2. Entrar na pasta
+        
+        cd nome-do-repo
+        
+    3. Buscar todas as branches remotas
+        
+        git fetch --all
+        
+    4. Trocar para a develop
+        
+        git checkout develop
+
+### 3. DESENVOLVIMENTO (Feature) PARTE 1
+
+    ✅ Durante o desenvolvimento devemos usar features (usado para novas funcionalidades, melhorias ou tarefas da sprint.)
+
+    1. Criar branch
+        
+        git checkout -b feature/login
+        
+    2. Desenvolve 
+    3. Atualizar o CHANGELOG.md utilizando o modelo
+        
+        Feature: nome
+        ###  
+        >> Descrição
+        
+    4. Faz o commit 
+        
+        git add .
+
+        git commit -m “feat:criado modulo de login”
+        
+    5. Faz o push
+        
+        git push -u origin feature/login
+        
+    6. Mergia na **develop**
+        
+        git checkout develop
+        
+        git merge feature/login
+
+        git push origin develop
+        
+    7. Testa
+    8. Deleta a feature
+        
+        ⚠️ Obs.: recomenda-se deletar a feature somente após os testes.
+        
+        1. Deletar a feature no remoto
+            
+            git push origin --delete feature/login
+            
+        2. Deletar a feature local 
+            
+            git branch -d feature/login
+
+### 4. DESENVOLVIMENTO (Feature) PARTE 2
+    
+    1. Garantir que a develop está atualizada 
+        
+        git checkout develop
+        
+        git pull origin develop
+        
+    2. Ir para a main 
+        
+        git checkout main
+        
+    3. Fazer merge da develop para a main | Merge the develop directory into the main directory.
+        
+        git merge develop
+        
+    4. Testar localmente 
+    
+     ✅ Modelo de Commits:
+    
+    Use Conventional Commits:
+    
+        1. feat:
+        
+        Para nova funcionalidade (qualquer tamanho).
+        
+        Exemplo: 
+        
+        feat: add input field to user form
+        
+        2. fix:
+        
+        Para correções de bugs.
+        
+        Exemplo:
+         
+        fix: correct null value when saving profile
+        
+        3. chore:
+        
+        Tarefas internas, sem impacto no usuário.
+        
+        Exemplo:
+         
+        chore: update dependencies
+         
+        4. refactor:
+        
+        Código reescrito sem mudar comportamento.
+        
+        Exemplo: 
+
+        refactor: simplify user validation logic` 
+        
+        5. docs:
+        
+        Mudança em documentação.
+        
+        Exemplo: 
+        
+        docs: improve authentication section
+        
+        6. style:
+        
+        Ajustes visuais ou de formatação que não mudam lógica.
+        
+        Exemplo:
+          
+        style: format code with prettier
+        
+        7. test:
+        
+        Adição ou correção de testes.
+        
+        Exemplo: 
+        
+        test: add tests for login service
+        
+
+### 5. Tags e changelog
+    
+    1. Ajuste do CHANGELOG (O **CHANGELOG da main** é o oficial e **usa tags**)
+        
+        1. Edita CHANGELOG.md na main
+        2. Organiza tudo na seção `[vX.Y.Z]` 
+        3. Commita: 
+        
+        git add CHANGELOG.md
+        
+        git commit -m "docs: update changelog for vX.Y.Z"
+        
+        git push origin main
+        
+    2. Criação da TAG anotada
+        
+        git tag -a vX.Y.Z -m "Release vX.Y.Z"
+        
+        git push origin vX.Y.Z
+
+### 6. Criar Release
+    
+    1. Abrir GitHub → Releases
+    2. Draft new release
+    3. Selecionar a tag vX.Y.Z
+
+        vX.Y.Z — Nome da release
+        
+    4. Título:
+    5. Descrição: colar trecho do CHANGELOG
+        Neste momento, o release pode ser personalizado de uma forma mais intuita/criativa, incluse usar os emojis. 
+    6. Publicar
+
+### 7. HotFix
+    
+    ✅ Usado para correções urgentes que não podem esperar a sprint.
+    
+    Exemplos:
+    
+    hotfix/fix-payment-null
+    hotfix/auth-token-bug
+    
+    Fluxo:
+    
+    1. Cria branch 
+        
+        git checkout -b hotfix/nome
+        
+    2. Corrige
+    3. Merge na main (porque é urgente)
+    4. Cria TAG
+    5. Merge também na develop para sincronizar
