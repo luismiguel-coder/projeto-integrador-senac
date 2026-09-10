@@ -52,7 +52,7 @@ E um codigo bidimensional (2D) que guarda muita informacao em pouco espaco. Pode
 
 - **Navegadores** — Funciona via emulacao de teclado no Chrome, Edge e Firefox.
 - **Multiplataforma** — Deve rodar em Windows, Android e iOS.
-- **Velocidade** — Resposta em menos de 1 segundo.
+- **Velocidade** — Resposta rapida.
 - **Resistencia** — Suporta poeira, quedas e variacao de temperatura.
 - **Alcance wireless** — Minimo de 10 metros para operacao sem fio.
 
@@ -90,7 +90,7 @@ def buscar_produto(codigo: str):
     return produto
 ```
 
-O frontend faz um `fetch` para `http://localhost:8000/api/produto/7891234567890` e o FastAPI devolve o JSON com os dados do produto. Tudo em **menos de 1 segundo**.
+O frontend faz um `fetch` para `http://localhost:8000/api/produto/7891234567890` e o FastAPI devolve o JSON com os dados do produto.
 
 Nao precisa instalar nada no computador. O navegador ja reconhece o bipador como teclado.
 
