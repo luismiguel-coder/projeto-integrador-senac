@@ -34,15 +34,16 @@ A solução substitui cadastros manuais propensos a erros por um fluxo seguro de
 
 ## 📁 Estrutura do Repositório
 
-
+```
 projeto-integrador-senac/
 ├── docs/                      # Especificações técnicas, Requisitos (RF/RNF), Casos de Uso e Guias
 │   ├── requisitos/            # Matriz de rastreabilidade, RNF e especificações de segurança
 │   └── seguranca/             # Guia conceitual OWASP Top 10 e adequação à LGPD
 ├── backend/                   # Código-fonte da API REST (Rotas, Controllers e Parser XML)
 ├── frontend/                  # Interfaces Web/PWA (Telas de Login, Conferência e Painel do Gerente)
-├── database/                  # Scripts SQL 
+├── database/                  # Scripts SQL
 └── README.md                  # Apresentação e documentação principal do projeto
+```
 
 
 ### Passo a Passo
