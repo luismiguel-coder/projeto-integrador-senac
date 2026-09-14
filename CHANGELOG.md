@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0] - 2026-09-14
+
+### Adicionado
+- README principal do repositório
+
+### Modificado
+- Atualização do documento de atribuições de requisitos
+
 ## [1.1.0] - 2026-09-10
 
 ### Adicionado
