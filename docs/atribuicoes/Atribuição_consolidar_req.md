@@ -1,7 +1,8 @@
 # 📢 DIRETRIZES DE COMUNICAÇÃO E FLUXO DE REPORTES
 
-Para garantir que o nosso projeto ande rápido e ninguém fique travado ou sobrecarregado, estabelecemos uma regra de comunicação direta. Se você tiver alguma dúvida, precisar de dados ou for entregar a sua atividade, siga **estritamente** os caninhos abaixo:
+Para garantir que o nosso projeto ande rápido e ninguém fique travado ou sobrecarregado, estabelecemos uma regra de comunicação direta. Se você tiver alguma dúvida, precisar de dados ou for entregar a sua atividade, siga **estritamente** os caminhos abaixo:
 
+A partir de agora, não aceitaremos mais arquivos DOCX (Word), apenas arquivos MD (Markdown)
 ---
 
 ### 🚨 1. CANAIS DE REPORTE PARA INTEGRANTES DE APOIO (QUEM FALA COM QUEM?)
@@ -12,6 +13,7 @@ Para garantir que o nosso projeto ande rápido e ninguém fique travado ou sobre
     *   *O que tratar:* Tirar dúvidas sobre a montagem do dicionário de Termos do projeto e enviar o arquivo parcial/final para ela revisar e formatar.
 *   **LUIZ CARLOS** ➡️ Deve se comunicar **única e exclusivamente** com o **EDIGELSON** ou com a **KAMILA**.
     *   *O que tratar:* Solicitar ao **YURI** os códigos de cores das telas para ajudar fazer os testes de contraste no Coolors, mas enviar as dúvidas e a tabela final de testes apenas para o **EDIGELSON** ou para a **KAMILA** revisarem. 
+    (EM CASO DE AUSÊNCIA DE YURI O PAPEL PODE SER INVESTIDO LUIZ CARLOS MANDAR AS OPÇÕES DE CORES JÁ ACESSÍVEL PARA O YURI)
 ---
 
 ### 💼 2. INTEGRAÇÃO E APOIO ENTRE GRUPOS
