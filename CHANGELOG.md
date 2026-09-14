@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0] - 2026-09-14
+
+### Adicionado
+- Estrutura de pastas `back-end/`, `front-end/` e `database/` com `.gitkeep`
+- Pasta `docs/requisitos/` com matriz de rastreabilidade, RNF e especificações de segurança
+- Pasta `docs/seguranca/` com guia conceitual OWASP Top 10 e adequação à LGPD
+- Documento de pesquisa de segurança
+
+### Modificado
+- Estrutura do repositório no README.md corrigida para refletir nomes reais das pastas (`back-end/`, `front-end/`)
+- Adicionadas subpastas `docs/atribuicoes/`, `docs/estrutura-documentacao/` e `docs/gestao-equipe/` no README
+
 ## [1.2.0] - 2026-09-14
 
 ### Adicionado

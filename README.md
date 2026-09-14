@@ -36,13 +36,16 @@ A solução substitui cadastros manuais propensos a erros por um fluxo seguro de
 
 ```
 projeto-integrador-senac/
-├── docs/                      # Especificações técnicas, Requisitos (RF/RNF), Casos de Uso e Guias
-│   ├── requisitos/            # Matriz de rastreabilidade, RNF e especificações de segurança
-│   └── seguranca/             # Guia conceitual OWASP Top 10 e adequação à LGPD
-├── backend/                   # Código-fonte da API REST (Rotas, Controllers e Parser XML)
-├── frontend/                  # Interfaces Web/PWA (Telas de Login, Conferência e Painel do Gerente)
-├── database/                  # Scripts SQL
-└── README.md                  # Apresentação e documentação principal do projeto
+├── docs/                          # Especificações técnicas, Requisitos (RF/RNF), Casos de Uso e Guias
+│   ├── atribuicoes/               # Atribuições de requisitos
+│   ├── estrutura-documentacao/    # Estrutura para documentação do projeto
+│   ├── gestao-equipe/             # Organização e gestão da equipe
+│   ├── requisitos/                # Matriz de rastreabilidade, RNF e especificações de segurança
+│   └── seguranca/                 # Guia conceitual OWASP Top 10 e adequação à LGPD
+├── back-end/                      # Código-fonte da API REST (Rotas, Controllers e Parser XML)
+├── front-end/                     # Interfaces Web/PWA (Telas de Login, Conferência e Painel do Gerente)
+├── database/                      # Scripts SQL
+└── README.md                      # Apresentação e documentação principal do projeto
 ```
 
 
