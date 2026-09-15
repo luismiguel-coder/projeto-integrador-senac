@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.5.0] - 2026-09-15
+
+### Modificado
+- Refatoração das rotas: imports diretos de routers no `__init__.py`
+
+## [1.4.0] - 2026-09-15
+
+### Adicionado
+- README do back-end com documentação de estrutura e rotas
+- `.gitignore` no back-end
+
+### Modificado
+- Renomeado `product.py` → `products.py`
+- Renomeado `stock.py` → `stocks.py`
+
+### Removido
+- `.gitkeep` do back-end (substituído por arquivos reais)
+
 ## [1.3.0] - 2026-09-14
 
 ### Adicionado

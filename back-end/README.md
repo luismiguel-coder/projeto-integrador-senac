@@ -44,8 +44,8 @@ back-end/
     ├── login.py         # POST /login  → Autenticação
     ├── singup.py        # POST /singup → Cadastro de usuários
     ├── help.py          # GET /help    → Ajuda
-    ├── products.py      # POST /produtos → Produtos
-    ├── stocks.py        # POST /estoque  → Estoque
+    ├── products.py      # POST /products → Produtos
+    ├── stocks.py        # POST /stocks   → Estoque
     ├── logs.py          # GET /logs    → Logs do sistema
     └── ai.py            # GET /ai      → Serviço de IA
 ```
@@ -58,8 +58,8 @@ back-end/
 | POST   | `/login`    | `login.py`    | Autenticação de usuário  |
 | POST   | `/singup`   | `singup.py`   | Cadastro de usuário      |
 | GET    | `/help`     | `help.py`     | Página de ajuda          |
-| POST   | `/produtos` | `products.py` | Gestão de produtos       |
-| POST   | `/estoque`  | `stocks.py`   | Gestão de estoque        |
+| POST   | `/products` | `products.py` | Gestão de produtos       |
+| POST   | `/stocks`   | `stocks.py`   | Gestão de estoque        |
 | GET    | `/logs`     | `logs.py`     | Logs de auditoria        |
 | GET    | `/ai`       | `ai.py`       | Serviço de IA            |
 
