@@ -1,6 +1,5 @@
 # Importando os tipos de colunas do SQLAlchemy
 from sqlalchemy import Column, Integer, String
-
 # Importando a classe Base do database
 from database import Base
 
