@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.6.0] - 2026-09-15
+
+### Corrigido
+- Rotas no README atualizadas de `/produtos` e `/estoque` para `/products` e `/stocks`
+
 ## [1.5.0] - 2026-09-15
 
 ### Modificado
