@@ -1,11 +1,11 @@
 # Importando todos os módulos de rotas
-from . import home
-from . import login
-from . import singup
-from . import help
-from . import ai
-from . import stocks
-from . import products
+from .home import router as routerHome
+from .login import router as routerLogin
+from .singup import router as routerSingup
+from .help import router as routerHelp
+from .ai import router as routerAI
+from .stocks import router as routerStocks
+from .products import router as routerProducts
 
 # Definindo quais módulos são exportados
-__all__ = ["home", "login", "singup", "help", "ai", "stocks", "products"]
+__all__ = ["routerHome", "routerLogin", "routerSingup", "routerHelp", "routerAI", "routerStocks", "routerProducts"]
