@@ -1,11 +1,11 @@
-# Importando a classe FastAPI para criar a aplicação
-from fastapi import FastAPI
 # Importando o database para criar as tabelas no banco
 import database
-# Importando os models para que o SQLAlchemy reconheça as tabelas
-from models import schema
 # Importando o uvicorn para executar a aplicação
 import uvicorn
+# Importando a classe FastAPI para criar a aplicação
+from fastapi import FastAPI
+# Importando os models para que o SQLAlchemy reconheça as tabelas
+from models import schema
 # Importando os módulos de rotas (home, login, singup, help)
 from routes import routerHome, routerLogin, routerSingup, routerHelp, routerAI, routerStocks, routerProducts
     
