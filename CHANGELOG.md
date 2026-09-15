@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.6.2] - 2026-09-15
+
+### Modificado
+- `models/__init__.py` refatorado para usar padrão de alias (mesmo estilo do `routes/__init__.py`)
+- `main.py` atualizado para importar modelo via alias
+
+## [1.6.1] - 2026-09-15
+
+### Modificado
+- Imports reordenados no `main.py`
+
 ## [1.6.0] - 2026-09-15
 
 ### Corrigido

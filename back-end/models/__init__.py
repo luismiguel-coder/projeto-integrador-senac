@@ -1,5 +1,3 @@
-# Importando o modelo Projeto_Integrador do schema
-from .schema import Projeto_Integrador
+from .schema import Projeto_Integrador as modelProjetoIntegrador
 
-# Definindo quais modelos são exportados
-__all__ = ["Projeto_Integrador"]
+__all__ = ["modelProjetoIntegrador"]
