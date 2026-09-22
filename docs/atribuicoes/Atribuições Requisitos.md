@@ -14,7 +14,6 @@ Registrar exceções e tratamentos de erro - Yuri
 
 Luis Carlos e Ed
 Priorizar requisitos (Alta, Média, Baixa) – Ed
-Identificar integrações com outros sistemas- Ed
 Levantar permissões e perfis de acesso – Luis Carlos
 Identificar perfis de usuários – Luis Carlos 
 
