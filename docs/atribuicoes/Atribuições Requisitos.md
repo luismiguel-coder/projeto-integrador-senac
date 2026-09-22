@@ -1,5 +1,5 @@
 29/07/26
-Atribuições do Projeto Integrador - Levantamento de RequisitoAlaide e William:
+Atribuições do Projeto Integrador - Levantamento de Requisito Luis Carlos e Alaide:
  Levantar Regras de Negócios
 Identificar stakeholders envolvidos 
 
@@ -12,7 +12,7 @@ Identificar notificações e alertas – Yuri
 Registrar exceções e tratamentos de erro - Yuri
 
 
-Luis Carlos e Ed
+William e Ed
 Priorizar requisitos (Alta, Média, Baixa) – Ed
 Levantar permissões e perfis de acesso – Luis Carlos
 Identificar perfis de usuários – Luis Carlos 
