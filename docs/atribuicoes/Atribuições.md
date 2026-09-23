@@ -1,8 +1,10 @@
 Matriz de Atribuições — Projeto Integrador
+Prazo final para entraga dia 30/09/2026
 
 1. Trabalhos em Dupla 
 
 Luis Carlos e Alaíde
+
 - Levantar Regras de Negócio do mercado.
 - Identificar os stakeholders envolvidos.
 
