@@ -16,7 +16,7 @@ Kamila e Yuri
 - Yuri: Identificar notificações, alertas, exceções e tratamento de erros do sistema.
 
 
-William e Edigelso
+William e Edigelson 
 
 - Edigelson:Priorizar os requisitos levantados (Alta, Média, Baixa).
 - William:Levantar perfis de acesso, permissões e perfis de usuários.
@@ -33,12 +33,6 @@ Luis Miguel
 - Identificar as entradas de dados do sistema.
 - Identificar as saídas de dados e relatórios necessários.
 
-
-Arthur e Emilli
-
-- Validar os requisitos com os usuários finais do mercado.
-
-
 2. Atribuições Individuais e Específicas
 
 Alaíde
@@ -53,7 +47,7 @@ Arthur
 
 - Glossário: Criar uma tabela explicando de forma simples os termos técnicos e de varejo usados no projeto (ex: FEFO, Logs Imutáveis, RTO, RPO, SLA, Timeout, RBAC, Avarias, Divergência de Estoque).
 
-Edigelson (Ed)
+Edigelson 
 
 - Priorização Geral: Analisar a lista completa de requisitos e classificar a prioridade de desenvolvimento (Alta, Média, Baixa).
 
