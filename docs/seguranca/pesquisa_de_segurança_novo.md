@@ -1,3 +1,17 @@
+
+# "Controle de Acesso":
+
+R = Controle de Acesso e um grade conjunto de regras políticas que se aplicam tanto em lugares físicos quando em lugares digitais definido quem poderá usar os recursos no sistema ou lugares restritos mostrando quando, como e sobre quais condições vão decidir se o acesso serra autorizado ou negado.
+
+*fonte de pesquisa = https://pt.wikipedia.org/wiki/Controle_de_acesso*
+
+# "Política de Autenticação"
+ 
+R= e um conjunto de regras de políticas e procedimentos que garante a verificação do usuário com o dispositivo para acessar os recursos com base em senhas e biometria garantindo segurança e responsabilidade no sistemas e dispositivos. 
+
+*fonte de pesquisa = https://www.sciencedirect.com/topics/computer-science/authentication-policy*
+  
+
 OWASP Top 10 
 
 ## 1. Controle de acesso quebrado 
