@@ -1,0 +1,357 @@
+### CASOS DE USO E FLUXOS DE NAVEGAÇÃO
+
+Grupo: Grupo 2 — Front-End (Telas & Usabilidade)
+Tarefa: Elaboração dos Casos de Uso e Fluxos de Navegação
+Responsável: João Pedro de Menezes Almeida
+Função: Vice-Líder do Front-End
+Objetivo da tarefa: Documentar o caminho realizado pelos usuários nas telas do sistema para registrar, analisar e aprovar perdas, garantindo uma navegação de até 3 cliques nas ações principais.
+
+
+### UC01 — Autenticar usuário
+
+Ator: Todos os Usuários
+Tela: Autenticação
+
+Objetivo: Permitir o acesso ao sistema de acordo com o perfil de usuário.
+
+Fluxo:
+
+O usuário acessa a tela de Login.
+Informa usuário.
+Informa senha.
+Clica em Entrar.
+O sistema valida os dados.
+O usuário é direcionado ao Dashboard correspondente ao seu perfil.
+
+### UC02 — Registrar entrada via bipagem
+
+Ator: Estoquista / Admnistrador
+Tela: Bipagem
+
+Objetivo: Registrar automaticamente uma entrada de produto por meio da bipagem.
+
+Fluxo:
+
+Dashboard → Bipagem → leitura do código → confirmação da entrada
+
+Contagem de cliques:
+
+Clique 1: Bipagem
+Clique 2: Confirmar entrada
+
+✅ 2 cliques principais
+
+### UC03 — Registrar ocorrência de perda
+
+Ator: Estoquista / Admnistrador
+Tela: Registrar Perda
+
+Objetivo: Registrar uma ocorrência de perda no sistema.
+
+Os dados de entrada definidos no documento são:
+
+Código
+Nome
+Quantidade
+Motivo
+Setor
+Responsável
+Valor
+Evidência fotográfica
+
+Fluxo:
+
+Dashboard → Registrar Perda → preencher informações → registrar
+
+Contagem de cliques:
+
+Clique 1: Registrar Perda
+Clique 2: Registrar/Salvar perda
+
+✅ 2 cliques principais
+
+O Sistema ainda precisa validar os campos obrigatórios e as evidências.
+
+
+### UC04 — Analisar ocorrência de perda
+
+Ator: Analista de Prevenção de Perdas
+Tela: Analisar Perdas
+
+Objetivo: Avaliar uma ocorrência registrada e verificar se as informações estão corretas.
+
+Fluxo:
+
+A partir do Dashboard:
+
+O sistema apresenta as ocorrências pendentes.
+
+O sistema abre os detalhes:
+
+Produto;
+Quantidade;
+Motivo;
+Setor;
+Responsável;
+Valor;
+Data/hora;
+Evidência fotográfica;
+Observações.
+
+O analista registra sua análise e envia a ocorrência para aprovação.
+
+Contagem de cliques:
+
+Clique 1: Analisar Perdas
+Clique 2: Selecionar ocorrência
+Clique 3: Enviar para Aprovação
+
+✅ 3 cliques principais
+
+
+### UC05 — Aprovar ou Rejeitar ocorrência
+
+Ator: Admnistrador
+Tela: Aprovar / Rejeitar
+
+Objetivo: Tomar a decisão final sobre uma ocorrência de perda.
+
+Fluxo:
+
+Dashboard → Aprovar/Rejeitar → selecionar ocorrência → Aprovar/Rejeitar/Solicitar correção
+
+Contagem de cliques:
+
+Clique 1: Aprovar/Rejeitar
+Clique 2: Selecionar ocorrência
+Clique 3: Aprovar / Rejeitar / Solicitar correção
+
+✅ 3 cliques
+
+### UC06 — Consultar histórico de perdas
+
+Ator: Todos os Usuários, conforme a permissão
+Tela: Histórico
+
+Objetivo: Consultar ocorrências já registradas.
+
+Fluxo:
+
+Dashboard → Histórico → Aplicar Filtros → Consultar Registros 
+
+O sistema apresenta filtros como:
+
+Período;
+Produto;
+Setor;
+Motivo;
+Responsável;
+Status.
+
+O usuário aplica os filtros e visualiza os registros.
+
+O histórico deve utilizar paginação para facilitar a consulta de grandes quantidades de dados.
+
+Contagem de cliques:
+
+Clique 1: Histórico
+Clique 2: Aplicar Filtros
+Clique 3: Consultar Registros
+
+✅ 3 cliques
+
+### UC08 — Gerar relatórios
+
+Ator: Admnistrador / Analista
+Tela: Relatórios
+
+Objetivo: Gerar relatórios(Excel/PDF) para análise das perdas.
+
+Fluxo:
+
+DASHBOARD → Clique 1 → RELATÓRIOS → Selecionar relatório/filtros → Clique 2 → GERAR RELATÓRIO → Clique 3 → EXPORTAR PDF/EXCEL
+
+O usuário escolhe o tipo de relatório.
+
+Exemplos:
+
+Relatório de perdas por período;
+Perdas por setor;
+Perdas por motivo;
+Produtos vencidos;
+Relatório de auditoria.
+
+Depois define os filtros necessários.
+
+O sistema gera o relatório
+
+Apresenta o resultado.
+
+O usuário pode exportar para PDF/EXCEL
+
+Contagem de cliques:
+
+Clique 1: Relatórios
+Clique 2: Gerar Relatório
+Clique 3: Exportar PDF/Excel
+
+✅ 3 cliques
+
+### UC09 — Receber alertas de risco
+
+Ator: Todos os usuários
+Tela: Alertas
+
+O arquivo determina alertas para:
+
+Produtos próximos do vencimento;
+Risco financeiro;
+Baixa rotatividade;
+Excesso de estoque;
+Queda anormal nas vendas;
+Saídas excessivas.
+
+Aqui podemos documentar a navegação:
+
+Fluxo:
+
+Dashboard → Alertas
+
+Contagem de cliques:
+
+✅ 1 clique
+
+### UC10 — Acessar Menu do Usuário
+
+Ator: Todos os Usuários
+Disponibilidade: Todas as telas do sistema
+
+Objetivo: Permitir acesso rápido às opções relacionadas ao usuário.
+
+Fluxo:
+
+Perfil → opção desejada(Gerenciar Usuários/Configurações/Sair)
+
+O usuário está em qualquer tela do sistema.
+
+Clica na área com seu nome e perfil, localizada no canto superior direito.
+
+O sistema abre o menu do usuário.
+
+O sistema apresenta as opções disponíveis de acordo com o perfil.
+
+Opções disponíveis
+
+Admnistrador:
+
+Gerenciar Usuários
+Configurações
+Sair
+
+Estoquista:
+
+Configurações
+Sair
+
+Analista de Prevenção de Perdas:
+
+Configurações
+Sair
+
+Contagem de cliques:
+
+✅ 2 cliques
+
+### UC11 — Gerenciar Usuários
+
+Ator: Admnistrador
+Tela: Gerenciar Usuários
+
+Objetivo: Permitir ao Gerente/Supervisor administrar os usuários e suas permissões de acesso ao sistema.
+
+Fluxo:
+
+Perfil → Gerenciar Usuários
+
+O Gerente/Supervisor acessa qualquer tela do sistema.
+
+Clica no seu perfil.
+
+Clica em Gerenciar Usuários.
+
+O sistema exibe a tela de gerenciamento.
+
+O Gerente/Supervisor pode selecionar um usuário para visualizar ou alterar suas informações e permissões.
+
+Contagem de cliques:
+
+✅ 2 cliques
+
+### UC12 — Configurações
+
+Ator: Todos os Usuários
+Tela: Configurações
+
+Objetivo: Permitir que o usuário configure preferências de utilização do sistema.
+
+Fluxo:
+
+Perfil → Configurações
+
+O usuário acessa qualquer tela do sistema.
+Clica no seu perfil.
+Clica em Configurações.
+O sistema abre a tela de configurações.
+O usuário altera suas preferências disponíveis.
+
+Exemplos de configurações da interface:
+
+Modo claro/escuro
+Preferências visuais da interface
+Outras preferências de utilização do sistema
+
+Contagem de cliques:
+
+✅ 2 cliques
+
+## UC13 — Sair
+
+Ator: Todos os Usuários
+Disponibilidade: Todas as telas do sistema
+
+Objetivo: Encerrar a sessão do usuário e retornar à tela de login.
+
+Fluxo:
+
+Perfil → Configurações → Sair
+
+O usuário acessa o Menu do Usuário, disponível no canto superior direito.
+Seleciona a opção “Sair”.
+O sistema exibe um pop-up de confirmação com a mensagem:
+
+“Você realmente deseja encerrar a sessão?”
+
+O sistema apresenta as opções:
+
+Sim
+Não
+
+Caso o usuário selecione “Sim”, o sistema encerra a sessão atual.
+
+O sistema direciona o usuário para a Tela de Login.
+
+Fluxo alternativo — Cancelar
+
+O usuário seleciona “Não” no pop-up.
+
+O pop-up é fechado.
+
+O usuário permanece na tela em que estava.
+
+Contagem de cliques:
+
+Clique 1: Abrir Menu do Usuário
+Clique 2: Sair
+Clique 3: Confirmar Sair
+
+✅ 3 cliques
