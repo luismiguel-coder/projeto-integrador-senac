@@ -1,8 +1,11 @@
 # Consolidação dos Requisitos Técnicos de Segurança e Criptografia Backend
 
 **Projeto:** Sistema de Registro de Perdas para Supermercado  
+
 **Documento:** Consolidação Técnica de Segurança, Criptografia
+
 **Linguagem & Ambiente:** Python (FastAPI) 
+
 **Responsável Técnico:** Luis Miguel  
 **Data:** 29/09/2026  
 
@@ -39,7 +42,7 @@ O sistema implementa o modelo de segurança **RBAC (Role-Based Access Control)**
 * **Autenticação Stateless:** Emissão de tokens seguros **JWT (JSON Web Tokens)** assinados com chave secreta forte (HMAC SHA-256) com tempo de expiração curto (ex.: 8 horas) e rotação de refresh token.
 
 #### 3.2. Criptografia em Trânsito e em Repouso (LGPD)
-* **Em Trânsito (HTTPS):** Toda a comunicação entre o navegador/celular e o servidor Ubuntu é obrigatoriamente criptografada via **TLS 1.3 / HTTPS** configurado no servidor web Nginx.
+* **Em Trânsito (HTTPS):** Toda a comunicação entre o navegador/celular e o servidor é obrigatoriamente criptografada via **TLS 1.3 / HTTPS** configurado no servidor web.
 * **Em Repouso (Banco de Dados):** Dados sensíveis de identificação e logs de auditoria utilizam criptografia de coluna via algoritmo **AES-256**.
 
 ---
