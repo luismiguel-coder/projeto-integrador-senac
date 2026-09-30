@@ -1,36 +1,48 @@
-### DOCUMENTO: RNF - INFRAESTRUTURA
+# Especificação de Requisitos Não Funcionais (RNF) e Infraestrutura 
 
-**RNF- INFRAESTRUTURA: Luis Miguel**
-*   **Projeto:** Sistema de Gestão de Perdas – Supermercado
-*   **Documento:** Especificação de Requisitos Não Funcionais (RNF)
-*   **Equipe Responsável:** Grupo 3 (Infraestrutura, Integrações e Segurança Técnica)
-*   **Líder de Área:** Ed
-*   **Data de Emissão:** 11/08/2026
+**Projeto:** Sistema de Registro e Gestão de Perdas – Supermercado  
+**Documento:** Especificação Técnica de Infraestrutura, Arquitetura Python e Interface Mobile/PWA  
+**Responsável:** Luis Miguel  
+**Data de Atualização:** 29/09/2026  
 
 ---
 
-#### 1. INTRODUÇÃO E OBJETIVO
-Este documento especifica a infraestrutura necessária para suportar a **integração em tempo real** e o armazenamento de grandes volumes de dados. O foco é garantir que a "bipagem" automática e o envio de fotos de evidência não degradem a performance sistêmica, garantindo a confiabilidade dos relatórios gerados.
+### 1. Introdução e Objetivo
+Este documento especifica a infraestrutura tecnológica e a arquitetura de software para o **Sistema de Registro de Perdas para Supermercado**. O sistema opera de forma autônoma e independente (sem integração direta com ERP/PDV), focado no registro operacional em loja através de **dispositivos móveis (celulares/tablets)** e na gestão backend desenvolvida em **Python**. 
 
-#### 2. DETALHAMENTO DOS REQUISITOS (ESPECIFICAÇÃO TÉCNICA)
+A infraestrutura garante a captura de evidências fotográficas via câmera do celular no próprio corredor, compressão de imagens, resiliência off-line e auditoria completa dos lançamentos.
 
-| Requisito (RNF) | Descrição do Funcionamento | Métrica/Indicador de Sucesso |
+---
+
+### 2. Tabela Detalhada de Requisitos Não Funcionais (RNF)
+
+| Requisito (RNF) | Descrição do Funcionamento Técnico | Métrica / Indicador de Sucesso |
 | :--- | :--- | :--- |
-| **Capacidade de Armazenamento** | Dimensionamento do servidor para banco de dados e arquivos de evidência fotográfica. | Suporte para armazenamento de fotos comprimidas vinculadas ao ID da perda por até 90 dias antes do arquivamento. |
-| **Escalabilidade (RN-07)** | Capacidade de suportar o crescimento do volume de dados e multiestoques. | Arquitetura capaz de adicionar novas lojas/depósitos via configuração, sem necessidade de novo deploy de código. |
-| **Resiliência e Conexão** | Mecanismo de salvamento temporário durante perda de conectividade com o servidor. | Salvar dados localmente e realizar a sincronização automática em até 2 segundos após a volta do sinal. |
-| **Recuperação de Desastres** | Plano de backup automático para evitar perda de dados financeiros e operacionais. | Backups diários (às 03:00h) com tempo de restauração (RTO) máximo de 4 horas em caso de falha crítica. |
+| **Interface Mobile & Usabilidade (PWA)** | Interface Web Responsiva (*Mobile-First*) otimizada para uso em celulares e leitores de código de barras. Permite captura direta de foto da avaria pela câmera do celular. | Design touch-friendly, formulário fluido no celular e integração nativa com a câmera do dispositivo sem necessidade de instalação de app de loja. |
+| **Backend em Python** | API de alta performance desenvolvida em **Python (FastAPI)** para regra de negócio, autenticação e geração de relatórios. | Tempo de resposta de endpoints de lançamento em menos de 500ms; exportação de relatórios em PDF (`ReportLab`) e Excel (`Pandas`) em < 2s. |
+| **Capacidade de Armazenamento & Mídia** | Dimensionamento para banco de dados relacional e repositório de arquivos de evidência fotográfica. | Suporte para upload de fotos (até 5MB em JPG/PNG) enviadas pelo celular, com compressão automática via Python (`Pillow`) e retenção por 90 dias. |
+| **Escalabilidade e Multi-loja** | Arquitetura parametrizada para suportar o crescimento do volume de dados, novas filiais e setores. | Capacidade de adicionar novos supermercados, depósitos ou setores (Hortifruti, Açougue, Padaria) via painel administrativo, sem novo deploy de código. |
+| **Resiliência e Conectividade Off-line** | Mecanismo de salvamento temporário no navegador do celular (PWA/LocalData) para zonas de sombra nos corredores do mercado. | Salvar lançamentos e fotos localmente no celular durante quedas de sinal e realizar a sincronização automática com o backend em até 2 segundos após reconectar. |
+| **Recuperação de Desastres (DR) e Backup** | Plano de backup automático e redundância para evitar perda de dados financeiros e logs de auditoria. | Execução de backups diários automatizados do banco de dados (às 03:00h) com tempo máximo de restauração (RTO) de 4 horas. |
+| **Segurança e Rastreabilidade (Auditoria)** | Restrição de acesso, tráfego criptografado (HTTPS/TLS), senhas com hash seguro e log imutável de todas as ações. | Registro automático de IP, modelo de dispositivo móvel, usuário, data/hora e tipo de alteração no Relatório de Auditoria. |
 
-#### 3. MAPEAMENTO DE REGRAS DE NEGÓCIO (RN)
-*   **RN-01 (Estoque Inteligente):** A infraestrutura suporta a atualização em tempo real, impedindo que o estoque fique negativo devido a atrasos de processamento na integração.
-*   **RN-07 (Multiestoque):** Garante a separação lógica de saldos independentes por loja ou depósito dentro do mesmo banco de dados, permitindo transferências rastreáveis.
+---
 
-#### 4. INTEGRAÇÃO E SEGURANÇA
-*   **Sistemas Externos:** O banco de dados de fotos e logs deve estar integrado via APIs com os fluxos do **PDV (Caixa)** e dos sistemas ERP legados **RMS/Totvs**.
-*   **Privacidade:** O acesso aos servidores e às imagens de evidência é restrito à equipe de **TI/Segurança** e gestores autorizados, garantindo a integridade e proteção dos dados conforme perfis de acesso.
+### 3. Arquitetura do Ambiente Tecnológico Recomendado
 
-#### 5. VALIDAÇÃO DO LÍDER DE ÁREA
-*   **Revisão técnica realizada por:** Ed
-*   **Parecer:** ( ) Aprovado | ( ) Necessita Ajustes
-*   **Notas do Líder:** __________________________________________________________________
-```
+1. **Frontend / Cliente (Mobile & Desktop):**
+   * **Tecnologia:** Progressive Web App (PWA) / HTML5 / CSS3  / JavaScript.
+   * **Recursos:** Acesso à câmera nativa do celular para foto de evidência, leitor de código de barras web e interface adaptada para telas sensíveis ao toque.
+
+2. **Backend / Servidor de Aplicação (Python):**
+   * **Linguagem & Framework:** Python 3.10+ utilizando **FastAPI** .
+   * **Processamento de Imagens:** Biblioteca `Pillow` para redimensionar e comprimir as fotos enviadas pelos celulares antes de salvar no disco.
+   * **Relatórios e Exportações:** Bibliotecas `Pandas` / `openpyxl` para exportação em Excel (`.xlsx` e `.csv`) e `ReportLab` para relatórios consolidados em `PDF`.
+
+3. **Banco de Dados Relacional:**
+   * **Tecnologia:** PostgreSQL ou MySQL.
+   * **Recursos:** Suporte a transações ACID, campos de auditoria e índices otimizados para consultas temporais (mês atual vs. mês anterior).
+
+4. **Hospedagem e Servidor:**
+   * Servidor ...  sob protocolo HTTPS com certificado SSL/TLS.
+   * Bucket/Diretório seguro para arquivos de mídia com política de expiração automática de 90 dias.
