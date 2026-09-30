@@ -146,3 +146,87 @@ Para garantir a confiabilidade dos registros manuais de perdas (já que o sistem
    - Exportação estruturada em **PDF** (ótimo para impressão e reuniões de diretoria).
    - Exportação em **Excel (.xlsx) ou CSV** (ideal para análises avançadas em planilhas).
    - Funcionalidade de **impressão direta** de relatórios individuais e comprovantes.
+   Aqui está o texto completo formatado em Markdown dentro de um bloco de código, pronto para você copiar e colar com um clique:
+
+
+
+# Identificação das Entradas de Dados, Formulários e Cadastros
+
+**Responsável:** Luis Miguel  
+
+---
+
+### Contexto de Entrada
+Como o sistema funciona de forma independente e sem integração automática com o estoque, todas as informações que alimentam os relatórios, gráficos e dashboards dependem da **entrada manual de dados**. A seguir, estão especificados os formulários e cadastros necessários para operar o sistema.
+
+---
+
+### 1. Formulário Principal: Registro/Lançamento de Perda
+Este é o formulário operacional diário, utilizado pelos operadores ou fiscais de loja para registrar cada ocorrência de perda física.
+
+* **Data e Hora do Registro:** Preenchimento automático pelo sistema (com permissão de ajuste manual apenas para perfis autorizados).
+* **Produto:** Seleção via campo de busca rápida (por código de barras, código interno ou nome do produto).
+* **Categoria:** Preenchimento automático ao selecionar o produto (ex.: Laticínios, Mercearia, Limpeza).
+* **Setor da Ocorrência:** Seleção em caixa de listagem (*dropdown*):
+  * Hortifruti
+  * Açougue
+  * Padaria
+  * Frios e Laticínios
+  * Mercearia
+  * Bebidas
+  * Outros
+* **Quantidade Perdida:** Campo numérico obrigatório (suporta unidades inteiras ou fracionadas/quilos).
+* **Preço Unitário da Mercadoria:** Preenchido automaticamente a partir do cadastro do produto ou digitado manualmente.
+* **Valor Total da Perda:** Calculado automaticamente pelo sistema (`Quantidade × Preço Unitário`).
+* **Motivo da Perda:** Seleção em caixa de listagem (*dropdown*):
+  * Produto Vencido
+  * Avaria / Embalagem Danificada
+  * Quebra / Queda
+  * Furto / Extravio
+  * Armazenamento / Refrigeração Incorreta
+  * Outro
+* **Descrição Detalhada do Motivo (Campo "Outro"):** Campo de texto livre, obrigatório caso a opção selecionada no motivo seja "Outro".
+* **Upload de Comprovação Fotográfica:** Módulo de anexo de imagem (captura direta via câmera do dispositivo/celular ou upload de arquivo nos formatos JPG/PNG).
+* **Responsável pelo Registro:** Capturado automaticamente com base no usuário autenticado (login ativo).
+
+---
+
+### 2. Cadastros de Domínio (Tabelas de Apoio)
+Formulários de administração utilizados para alimentar as opções dos campos do formulário principal.
+
+#### 2.1. Cadastro de Produtos
+* **Código do Produto:** Identificador único (SKU ou Código de Barras).
+* **Nome/Descrição do Produto:** Texto explicativo.
+* **Categoria:** Vínculo com a tabela de categorias.
+* **Preço de Custo / Preço de Venda Unitário:** Valor base para cálculo do impacto financeiro da perda.
+* **Unidade de Medida:** Unidade (UN), Quilograma (KG), Litro (L), Caixa (CX), etc.
+
+#### 2.2. Cadastro de Setores
+* **Nome do Setor:** Descrição do local de operação (ex.: Padaria, Açougue).
+* **Responsável pelo Setor:** Nome ou cargo do encarregado.
+
+#### 2.3. Cadastro de Motivos de Perda
+* **Título do Motivo:** Nome padronizado da causa raiz.
+* **Status:** Ativo / Inativo.
+
+---
+
+### 3. Gerenciamento de Acesso e Usuários (Segurança)
+Formulário para controle de quem insere ou altera dados no sistema, fornecendo insumos para o **Relatório de Auditoria**.
+
+* **Nome Completo do Usuário:** Identificação.
+* **Matrícula / Login:** Credencial de acesso.
+* **Senha de Acesso:** Criptografada.
+* **Cargo / Função:** Ex.: Operador de Loja, Fiscal, Encarregado de Setor, Gerente.
+* **Nível de Permissão (Perfil):**
+  * *Operador:* Permite apenas cadastrar novas perdas.
+  * *Supervisor:* Permite cadastrar, editar e visualizar relatórios.
+  * *Administrador:* Acesso total (cadastros, exclusões, auditoria e exportações).
+
+---
+
+### 4. Regras de Validação e Consistência na Entrada
+1. **Obrigatoriedade:** Os campos *Produto*, *Quantidade*, *Setor*, *Motivo* e *Responsável* são de preenchimento obrigatório.
+2. **Validação de Imagem:** O sistema deve validar o tamanho máximo do arquivo de foto (ex.: até 5MB) para não sobrecarregar o banco de dados.
+3. **Inalterabilidade de Registros:** Após a confirmação do lançamento, a edição ou exclusão do registro só poderá ser feita por perfis com permissão de supervisor/administrador, gerando automaticamente um rastro no histórico de auditoria.
+```
