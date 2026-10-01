@@ -5,8 +5,8 @@
 *   **Projeto:** Sistema de Gestão de Perdas – Supermercado
 *   **Documento:** Carga e ResiliÊncia
 *   **Equipe Responsável:** Grupo 3
-*   **Líder de Área:** Ed
-*   **Data de Emissão:** 24/08/2026
+*   **Líder de Área:** Arthur
+*   **Data de Emissão:** 01/09/2026
 
 ---
 
@@ -37,11 +37,3 @@ Este documento detalha a capacidade de suporte a múltiplos usuários simultâne
 *   **Sistemas Externos:** O backup dos dados deve incluir integrações com RMS/Totvs, garantindo consistência entre sistemas em caso de restauração.
 *   **Privacidade:** Backups criptografados com o padrao de criptografia AES-256 e armazenados em local seguro com acesso restrito à equipe de TI, conforme LGPD.
 *   **Testes de Restauração:** Restauração simulada realizada mensalmente para validar integridade dos backups e cumprimento do RTO.
-
-#### 5. VALIDAÇÃO DO LÍDER DE ÁREA
-
-*   **Revisão técnica realizada por:** Ed
-*   **Parecer:** ( ) Aprovado | ( ) Necessita Ajustes
-*   **Notas do Líder:** Parcialmente aprovado.
-lider geral:
-tá ok
