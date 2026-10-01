@@ -77,7 +77,7 @@ Como o sistema exige o anexo de fotos de produtos avariados tiradas pelo celular
 
 ---
 
-### 6. Proteção da API e Hardening no Ubuntu
+### 6. Proteção da API e Hardening
 1. **CORS Restrito:** A API aceita requisições apenas do domínio oficial da aplicação do supermercado.
 2. **Prevenção de SQL Injection:** Uso obrigatório de ORM em Python (**SQLAlchemy** / **SQLModel**) com consultas parametrizadas.
 3. **Rate Limiting:** Proteção contra ataques de força bruta nas rotas de login (máximo 5 tentativas por minuto por IP).
