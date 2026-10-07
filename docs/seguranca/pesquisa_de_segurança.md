@@ -4,7 +4,7 @@
 
 R = Controle de Acesso e um grade conjunto de regras políticas que se aplicam tanto em lugares físicos quando em lugares digitais definido quem poderá usar os recursos no sistema ou lugares restritos mostrando quando, como e sobre quais condições vão decidir se o acesso serra autorizado ou negado.
 
-fonte de pesquisa = https://pt.wikipedia.org/wiki/Controle_de_acesso
+fonte de pesquisa = https://www.totvs.com/blog/gestao-para-recursos-humanos/controle-de-acessos/
 
 *"Política de Autenticação"*
  
