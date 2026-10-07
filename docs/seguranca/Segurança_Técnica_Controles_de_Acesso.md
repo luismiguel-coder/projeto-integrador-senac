@@ -10,7 +10,7 @@ Cada pessoa que usa o sistema terá um perfil. O perfil define as permissões de
 | Perfil | O que pode fazer | O que não pode fazer |
 |---|---|---|
 | Operador / Repositor | Registrar perdas, preencher quantidade, preço, motivo, destinação e anexar foto | Ver relatórios financeiros, valores acumulados, dashboards e dados de outros usuários |
-| Analista / Validador em Campo | Conferir, revisar, validar e assinar os registros de perda | Aprovar definitivamente perdas ou acessar relatórios financeiros completos |
+| Analista / Validador | Conferir, revisar, validar e assinar os registros de perda | Aprovar definitivamente perdas ou acessar relatórios financeiros completos |
 | Gerente | Aprovar ou rejeitar perdas, acessar dashboards financeiros | Editar ou apagar logs de auditoria |
 
 ## 3. Regras de Controle de Acesso
